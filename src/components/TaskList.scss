@@ -16,9 +16,8 @@
         &:not(:last-child) {
             margin-bottom: 1em;
         }
-        &.completed, &:hover {
-            background-color: #C9F7B6;
-        }
+        &.completed { background-color: #C9F7B6; }
+        &:hover { background-color: orange; }
     }
     .title {
         width: 70%;

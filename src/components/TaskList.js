@@ -1,14 +1,29 @@
+import { useEffect } from 'react';
 import './TaskList.scss';
 
 export default function TaskList({ tasks, setTasks }) {
+
+  useEffect(()=>{
+    const handleKeyDown = (event) => {
+      if (event.key === 'Delete' && tasks.length > 0) {
+        deleteTask(null, tasks.length - 1);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [tasks]);
+
   const toggleTaskCompletion = (index) => {
     const updatedTasks = [...tasks];
     updatedTasks[index].completed = !updatedTasks[index].completed;
     setTasks(updatedTasks);
   }
 
-  const deleteTask = (e, index) => {
-    e.stopPropagation();
+  const deleteTask = (e=null, index) => {
+    e && e.stopPropagation();
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   }
