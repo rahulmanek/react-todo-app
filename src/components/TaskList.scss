@@ -21,16 +21,12 @@
         }
     }
     .title {
-        width: 78%;
+        width: 70%;
+        font-size: 1em;
+        margin-left: 6px;
     }
     .title:hover {
         cursor: pointer;
-    }
-    input {
-        padding: 5px;
-        background: none;
-        font-size: 1em;
-        border: none;    
     }
     .buttons {
         width: auto;

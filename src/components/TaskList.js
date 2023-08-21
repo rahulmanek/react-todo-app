@@ -47,14 +47,8 @@ export default function TaskList({ tasks, setTasks }) {
   return (
     <div className="list-container">
       {tasks.map((task, index) => (
-        <div
-          className={`item ${task.completed ? 'completed' : ''}`}
-          onClick={() => toggleTaskCompletion(index)}
-          key={index}
-        >
-          <div className='title'>
-            <input type="text" placeholder={task.name} />
-          </div>
+        <div className={`item ${task.completed ? 'completed' : ''}`} key={index}>
+          <div className='title' onClick={() => toggleTaskCompletion(index)}>{task.name}</div>
           <div className='buttons'>
             <button onClick={(e) => arrangeTask(e, -1, index)}>⬆️</button>
             <button onClick={(e) => arrangeTask(e, 1, index)}>⬇️</button>
