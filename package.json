@@ -1,7 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
-  "homepage": "https://rahulmanek.github.io/react-todo-app-by-manek-rahul",
+  "homepage": "https://rahulmanek.github.io/react-todo-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
