@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: colorChange 10s infinite;
+  color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 0;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #fac921; /* Initial color */
+  }
+  25% {
+    background-color: #21acfa; /* Color at 25% of the animation */
+  }
+  50% {
+    background-color: #fa21ac; /* Color at 50% of the animation */
+  }
+  75% {
+    background-color: #acfa21; /* Color at 75% of the animation */
+  }
+  100% {
+    background-color: #fac921; /* Final color (same as initial) */
+  }
+}
